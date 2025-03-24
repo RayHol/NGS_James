@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Disable A-Frame's default loading screen
         this.el.sceneEl.setAttribute('loading-screen', 'enabled', false);
         // Get references to the necessary DOM elements
-        const target1 = document.getElementById("target1");
+        const Target1 = document.getElementById("Target1");
         const Target2 = document.getElementById("Target2");
         const Target3 = document.getElementById("Target3");
         const Target4 = document.getElementById("Target4");
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         // Event listener for first target found event
-        target1.addEventListener("targetFound", () => {
+        Target1.addEventListener("targetFound", () => {
             console.log("target 1 found");
             this.found = true;
             audioPrompt.style.display = "block";
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // Event listener for firt target lost event
-        target1.addEventListener("targetLost", () => {
+        Target1.addEventListener("targetLost", () => {
             console.log("target 1 lost");
             audioPrompt.style.display = "block";
             this.found = false;
@@ -145,91 +145,91 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // Event listener for thrid target found event
-        Target3.addEventListener("targetFound", () => {
-            console.log("target 3 found");
-            audioPrompt.style.display = "block";
-            this.found3 = true;
-            if (!played) {
-                startText.style.display = "none";
-                // backgroundImage.style.display = "none";
-                plane3.emit("fadein");
-                video3.play();
-                video3.addEventListener("ended", function videoend(e) {
-                    played = true;
-                }, false);
-                plane.object3D.position.copy(plane.object3D.position);
-            }
-        });
+        // Target3.addEventListener("targetFound", () => {
+        //     console.log("target 3 found");
+        //     audioPrompt.style.display = "block";
+        //     this.found3 = true;
+        //     if (!played) {
+        //         startText.style.display = "none";
+        //         // backgroundImage.style.display = "none";
+        //         plane3.emit("fadein");
+        //         video3.play();
+        //         video3.addEventListener("ended", function videoend(e) {
+        //             played = true;
+        //         }, false);
+        //         plane.object3D.position.copy(plane.object3D.position);
+        //     }
+        // });
 
         // Event listener for third target lost event
-        Target3.addEventListener("targetLost", () => {
-            console.log("target 3 lost");
-            audioPrompt.style.display = "block";
-            this.found3 = false;
-            if (!played) {
-                video3.pause();
-                startText.style.display = "block";
-                // backgroundImage.style.display = "block";
-            }
-        });
+        // Target3.addEventListener("targetLost", () => {
+        //     console.log("target 3 lost");
+        //     audioPrompt.style.display = "block";
+        //     this.found3 = false;
+        //     if (!played) {
+        //         video3.pause();
+        //         startText.style.display = "block";
+        //         // backgroundImage.style.display = "block";
+        //     }
+        // });
       
         // Event listener for forth target found event
-        Target4.addEventListener("targetFound", () => {
-            console.log("target 4 found");
-            audioPrompt.style.display = "block";
-            this.found4 = true;
-            if (!played) {
-                startText.style.display = "none";
-                // backgroundImage.style.display = "none";
-                plane4.emit("fadein");
-                video4.play();
-                video4.addEventListener("ended", function videoend(e) {
-                    played = true;
-                }, false);
-                plane.object3D.position.copy(plane.object3D.position);
-            }
-        });
+        // Target4.addEventListener("targetFound", () => {
+        //     console.log("target 4 found");
+        //     audioPrompt.style.display = "block";
+        //     this.found4 = true;
+        //     if (!played) {
+        //         startText.style.display = "none";
+        //         // backgroundImage.style.display = "none";
+        //         plane4.emit("fadein");
+        //         video4.play();
+        //         video4.addEventListener("ended", function videoend(e) {
+        //             played = true;
+        //         }, false);
+        //         plane.object3D.position.copy(plane.object3D.position);
+        //     }
+        // });
 
         // Event listener for forth target lost event
-        Target4.addEventListener("targetLost", () => {
-            console.log("target 4 lost");
-            audioPrompt.style.display = "block";
-            this.found4 = false;
-            if (!played) {
-                video4.pause();
-                startText.style.display = "block";
-                // backgroundImage.style.display = "block";
-            }
-        });
+        // Target4.addEventListener("targetLost", () => {
+        //     console.log("target 4 lost");
+        //     audioPrompt.style.display = "block";
+        //     this.found4 = false;
+        //     if (!played) {
+        //         video4.pause();
+        //         startText.style.display = "block";
+        //         // backgroundImage.style.display = "block";
+        //     }
+        // });
       
         // Event listener for fifth target found event
-        Target5.addEventListener("targetFound", () => {
-            console.log("target 5 found");
-            audioPrompt.style.display = "block";
-            this.found5 = true;
-            if (!played) {
-                startText.style.display = "none";
-                // backgroundImage.style.display = "none";
-                plane5.emit("fadein");
-                video5.play();
-                video5.addEventListener("ended", function videoend(e) {
-                    played = true;
-                }, false);
-                plane.object3D.position.copy(plane.object3D.position);
-            }
-        });
+        // Target5.addEventListener("targetFound", () => {
+        //     console.log("target 5 found");
+        //     audioPrompt.style.display = "block";
+        //     this.found5 = true;
+        //     if (!played) {
+        //         startText.style.display = "none";
+        //         // backgroundImage.style.display = "none";
+        //         plane5.emit("fadein");
+        //         video5.play();
+        //         video5.addEventListener("ended", function videoend(e) {
+        //             played = true;
+        //         }, false);
+        //         plane.object3D.position.copy(plane.object3D.position);
+        //     }
+        // });
 
         // Event listener for fifth target lost event
-        Target5.addEventListener("targetLost", () => {
-            console.log("target 5 lost");
-            audioPrompt.style.display = "block";
-            this.found5 = false;
-            if (!played) {
-                video5.pause();
-                startText.style.display = "block";
-                // backgroundImage.style.display = "block";
-            }
-        });
+        // Target5.addEventListener("targetLost", () => {
+        //     console.log("target 5 lost");
+        //     audioPrompt.style.display = "block";
+        //     this.found5 = false;
+        //     if (!played) {
+        //         video5.pause();
+        //         startText.style.display = "block";
+        //         // backgroundImage.style.display = "block";
+        //     }
+        // });
 
       
       
@@ -246,10 +246,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // Delay the display of start text and background image
-        setTimeout(function() {
+    setTimeout(function() {
+        if(startText){ // checks to make sure the element has been loaded
             startText.style.display = "block";
+        }
+        if(backgroundImage){ // checks to make sure the element has been loaded
             backgroundImage.style.display = "block";
-        }, 3000);  // Delay of 3000ms (3 seconds)
+        }
+    }, 3000);  // Delay of 3000ms (3 seconds)
 
         window.addEventListener("orientationchange", () => {
           // Reload the page
