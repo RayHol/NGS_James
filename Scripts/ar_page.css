@@ -106,7 +106,8 @@
 }
 
 #audioPrompt {
-    display: none;
+    visibility: hidden;
+    pointer-events: none;
     top: 80%;
 }
 #audioPrompt img {
